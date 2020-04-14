@@ -1,13 +1,16 @@
 package br.usjt.usjt_ccp3anmca_jpa_hibernate.model;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -35,10 +38,14 @@ public class Previsao implements Serializable {
 	@OneToOne(optional=false)
 	@JoinColumn(name="id_dos_diasDaSemana")
 	private DiasDaSemana diasDaSemana;
-	
-	public Long getId() {
-		return id;
-	}
+//	
+//	@OneToMany (mappedBy = "previsao", cascade=CascadeType.ALL)
+//	private List <Cidades> cidades;
+//
+//	private Cidades cidade;
+//	public Long getId() {
+//		return id;
+//	}
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -119,6 +126,18 @@ public class Previsao implements Serializable {
 				+ ", descricao=" + descricao + ", latitude=" + latitude + ", longitude=" + longitude + ", hora=" + hora
 				+ ", diasDaSemana=" + diasDaSemana + "]";
 	}
+//	public List <Cidades> getCidades() {
+//		return cidades;
+//	}
+//	public void setCidades(List <Cidades> cidades) {
+//		this.cidades = cidades;
+//	}
+//	public Cidades getCidade() {
+//		return cidade;
+//	}
+//	public void setCidade(Cidades cidade) {
+//		this.cidade = cidade;
+//	}
 
 	
 }

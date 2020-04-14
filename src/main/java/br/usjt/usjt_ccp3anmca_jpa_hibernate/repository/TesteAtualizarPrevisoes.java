@@ -5,7 +5,7 @@ import javax.persistence.EntityTransaction;
 
 import br.usjt.usjt_ccp3anmca_jpa_hibernate.model.Previsao;
 
-public class TesteAtualizaPrevisoes {
+public class TesteAtualizarPrevisoes {
 
 	public static void main(String[] args) {
 		EntityManager manager = JPAUtil.getEntityManager();
